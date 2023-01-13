@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="citaMedica.ActualizarPaciente">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Actualizar Paciente"
+                VerticalOptions="CenterAndExpand"  FontSize="Large" FontAttributes="Bold"
+                HorizontalOptions="CenterAndExpand" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Ingrese la Cedula" FontSize="Medium"  Grid.Row="0" Grid.Column="0"/>
+                <Entry x:Name="txtCedula" Placeholder="Cedula" Keyboard="Numeric" Grid.Row="0" Grid.Column="1"></Entry>
+                <Label Text="Ingrese el Nombre" FontSize="Medium"  Grid.Row="1" Grid.Column="0"/>
+                <Entry x:Name="txtNombre" Placeholder="Nombre" Keyboard="Text" Grid.Row="1" Grid.Column="1"></Entry>
+                <Label Text="Ingrese el Apellido" FontSize="Medium"  Grid.Row="2" Grid.Column="0"/>
+                <Entry x:Name="txtApellido" Placeholder="Apellido" Keyboard="Text" Grid.Row="2" Grid.Column="1"></Entry>
+                <Label Text="Ingrese el Telefono" FontSize="Medium"  Grid.Row="3" Grid.Column="0"/>
+                <Entry x:Name="txtTelefono" Placeholder="Telefono" Keyboard="Numeric" Grid.Row="3" Grid.Column="1"></Entry>
+                <Label Text="Ingrese el Correo" FontSize="Medium"  Grid.Row="4" Grid.Column="0"/>
+                <Entry x:Name="txtCorreo" Placeholder="Correo" Keyboard="Text" Grid.Row="4" Grid.Column="1"></Entry>
+                <Label Text="Ingrese la Direccion" FontSize="Medium"  Grid.Row="5" Grid.Column="0"/>
+                <Entry x:Name="txtDireccion" Placeholder="Direccion" Keyboard="Text" Grid.Row="5" Grid.Column="1"></Entry>
+                <Label Text="Ingrese el Estado" FontSize="Medium"  Grid.Row="6" Grid.Column="0"/>
+                <Entry x:Name="txtEstado" Placeholder="Estado" Keyboard="Numeric" Grid.Row="6" Grid.Column="1"></Entry>
+                <Button Text="Actualizar" x:Name="btnActualizar" Clicked="btnActualizar_Clicked" Grid.Row="7" Grid.Column="0"/>
+                <Button Text="Regresar" x:Name="btnRegresar" Clicked="btnRegresar_Clicked" Grid.Row="7" Grid.Column="1"/>
+
+
+
+
+
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

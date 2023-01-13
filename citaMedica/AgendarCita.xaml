@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="citaMedica.AgendarCita">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Agregar Cita"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Text=" Cedula" Grid.Row="0"  Grid.Column="0" FontAttributes="Bold" />
+                <Label x:Name="txtCedula" Grid.Row="1"  Grid.Column="1" FontAttributes="Bold" />
+                
+                <Label Text="Paciente" Grid.Row="1"  Grid.Column="0" FontAttributes="Bold" />
+                <Label x:Name="txtPaciente" Grid.Row="1"  Grid.Column="1" FontAttributes="Bold" />
+                
+                <Label Text="Ingrese Medico" Grid.Row="2"  Grid.Column="0" FontAttributes="Bold" />
+                <Entry x:Name="entMedico" Grid.Row="2" Grid.Column="1" Placeholder="Medico" Keyboard="Text" />
+                <Label Text="Ingrese Especialidad" Grid.Row="3"  Grid.Column="0" FontAttributes="Bold" />
+                <Entry x:Name="entEspecialidad" Grid.Row="3" Grid.Column="1" Placeholder="Especialidad" Keyboard="Text" />
+                <Label Text="Ingrese Fecha" Grid.Row="4"  Grid.Column="0" FontAttributes="Bold" />
+                <Entry x:Name="entFecha" Grid.Row="4" Grid.Column="1"/>
+              
+                <Label Text="Ingrese Hora" Grid.Row="5"  Grid.Column="0" FontAttributes="Bold" />
+                <Entry x:Name="entHora" Grid.Row="5" Grid.Column="1"/>
+               
+                
+                <Button x:Name="btnInsertar" Text="Insertar" Grid.Row="7" Grid.Column="0" Clicked="btnInsertar_Clicked" />
+                <Button x:Name="btnRegresar" Text="Regresar" Grid.Row="7" Grid.Column="1" Clicked="btnRegresar_Clicked" />
+
+
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

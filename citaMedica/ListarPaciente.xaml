@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="citaMedica.ListarPaciente">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <Label Text="Listado Pacientes" FontSize="Large" HeightRequest="50"
+                   FontAttributes="Bold"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+                <ListView x:Name="lstPaciente" SelectionMode="Single" ItemSelected="lstPaciente_ItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width=".1*"/>
+                                            <ColumnDefinition Width=".2*"/>
+                                            <ColumnDefinition Width=".3*"/>
+                                            <ColumnDefinition Width=".4*"/>
+                                            <ColumnDefinition Width=".5*"/>
+                                            <ColumnDefinition Width=".6*"/>
+                                            <ColumnDefinition Width=".7*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+
+
+                                        </Grid.RowDefinitions>
+
+                                        <Label Text="{Binding cedulaPaciente}" Grid.Column="0" 
+                                           FontAttributes="Bold" FontSize="10" />
+                                        <Label Text="{Binding nombrePaciente}" Grid.Column="1" 
+                                           FontAttributes="Bold" FontSize="10" />
+                                        <Label Text="{Binding apellidoPaciente}" Grid.Column="2" 
+                                           FontAttributes="Bold" FontSize="10" />
+                                        <Label Text="{Binding correoPaciente}" Grid.Column="3" 
+                                           FontAttributes="Bold" FontSize="10" />
+                                        <Label Text="{Binding telefonoPaciente}" Grid.Column="4" 
+                                           FontAttributes="Bold" FontSize="10" />
+                                        <Label Text="{Binding direccionPaciente}" Grid.Column="5" 
+                                           FontAttributes="Bold" FontSize="10" />
+                                        <Label Text="{Binding estadoPaciente}" Grid.Column="6" 
+                                           FontAttributes="Bold" FontSize="10" />
+
+
+
+
+
+                                    </Grid>
+
+
+
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Button Text="Actualizar" x:Name="btnActualizar" Clicked="btnActualizar_Clicked" BackgroundColor="CornflowerBlue" />
+                <Button Text="Ingresar Nuevo Paciente" x:Name="btnNuevoPaciente" Clicked="btnNuevoPaciente_Clicked" BackgroundColor="CornflowerBlue" />
+                <Button Text="Eliminar Paciente" x:Name="btnEliminaPaciente" Clicked="btnEliminaPaciente_Clicked" BackgroundColor="CornflowerBlue"/>
+                <Button Text="Agendar Cita" x:Name="btnAgendar" Clicked="btnAgendar_Clicked" BackgroundColor="CornflowerBlue" />
+                <Button Text="Mostrar Citas" x:Name="btnMostrar" Clicked="btnMostrar_Clicked" BackgroundColor="CornflowerBlue" />
+
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
